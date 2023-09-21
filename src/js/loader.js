@@ -1,4 +1,5 @@
 import * as LoaderConfig from './loader.config'
+import { globals } from './globals';
 
 export class Loader {
   constructor(loader) {
@@ -14,6 +15,8 @@ export class Loader {
       }
 
       this.loader.load((loader, res) => {
+        // store the loaded resources in the globals object
+        globals.resources = res;
         resolve();
       })
     })
