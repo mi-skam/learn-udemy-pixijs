@@ -7,6 +7,8 @@ export class PuzzleGrid {
     this.container = new PIXI.Container();
     this.container.x = window.innerWidth / 2;
     this.container.y = window.innerHeight / 2;
+    // enable sortableChildren to be able to sort the children by zIndex
+    this.container.sortableChildren = true;
     this.toShuffle = toShuffle;
     this.createPuzzlePieces();
   }
