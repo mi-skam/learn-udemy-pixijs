@@ -1,5 +1,5 @@
-import * as PIXI from "pixi.js";
-import { globals } from "./globals";
+import * as PIXI from 'pixi.js';
+import { globals } from './globals';
 
 export class PuzzlePiece extends PIXI.utils.EventEmitter {
   constructor(id, x, y) {
@@ -19,10 +19,10 @@ export class PuzzlePiece extends PIXI.utils.EventEmitter {
   setInteractive() {
     this.sprite.interactive = true;
     this.sprite
-      .on("pointerdown", this.onDragStart, this)
-      .on("pointerup", this.onDragEnd, this)
-      .on("pointerupoutside", this.onDragEnd, this)
-      .on("pointermove", this.onDragMove, this);
+      .on('pointerdown', this.onDragStart, this)
+      .on('pointerup', this.onDragEnd, this)
+      .on('pointerupoutside', this.onDragEnd, this)
+      .on('pointermove', this.onDragMove, this);
   }
   onDragStart(e) {
     this.dragging = true;
@@ -36,11 +36,14 @@ export class PuzzlePiece extends PIXI.utils.EventEmitter {
     this.sprite.zIndex = 1;
   }
   onDragEnd() {
+    // play the click sound
+    globals.resources.click.sound.play();
+
     this.dragging = false;
     // reset the z-index
     this.sprite.zIndex = 0;
     // emit a custom event, so the parent container can listen for it
-    this.emit("dragend");
+    this.emit('dragend');
   }
   resetPosition() {
     this.sprite.x = this.field.x;

@@ -15,6 +15,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "pixi-sound": "^3.0.5",
     "pixi.js": "^5.3.12"
   }
 }

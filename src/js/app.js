@@ -9,9 +9,9 @@ export class App {
     document.body.appendChild(this.app.view);
 
     // load the ressources
-    this.loader = new Loader(this.app.loader)
+    this.loader = new Loader(this.app.loader);
     await this.loader.preload();
-    this.start()
+    this.start();
   }
 
   start() {

@@ -1,6 +1,6 @@
-import * as PIXI from "pixi.js";
-import { PuzzleGridConfig } from "./puzzle-grid.config";
-import { PuzzlePiece } from "./puzzle-piece";
+import * as PIXI from 'pixi.js';
+import { PuzzleGridConfig } from './puzzle-grid.config';
+import { PuzzlePiece } from './puzzle-piece';
 
 export class PuzzleGrid {
   constructor(isRandom = true) {
@@ -37,7 +37,7 @@ export class PuzzleGrid {
       this.container.addChild(piece.sprite);
       this.pieces.push(piece);
 
-      piece.on("dragend", () => this.onPieceDragend(piece));
+      piece.on('dragend', () => this.onPieceDragend(piece));
     });
   }
   onPieceDragend(piece) {
@@ -53,7 +53,6 @@ export class PuzzleGrid {
       const replaceField = pieceToReplace.field;
       pieceToReplace.setField(piece.field);
       piece.setField(replaceField);
-      
     } else {
       piece.resetPosition();
     }
