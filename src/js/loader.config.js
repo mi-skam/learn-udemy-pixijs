@@ -9,7 +9,9 @@ import p07 from '../../assets/sprites/puzzle/07.png';
 import p08 from '../../assets/sprites/puzzle/08.png';
 import p09 from '../../assets/sprites/puzzle/09.png';
 
+import hand from '../../assets/sprites/hand.png';
+
 import click from '../../assets/sounds/click.mp3';
 import music from '../../assets/sounds/music.mp3';
 
-export { click, music, bg, p01, p02, p03, p04, p05, p06, p07, p08, p09 };
+export { click, music, bg, hand, p01, p02, p03, p04, p05, p06, p07, p08, p09 };

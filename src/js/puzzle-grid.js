@@ -11,7 +11,7 @@ export class PuzzleGrid {
     this.container.sortableChildren = true;
     this.createPuzzlePieces(isRandom);
   }
-
+ 
   _shuffle(grid) {
     return grid.reduce(
       (acc, curr, idx, grid) => {

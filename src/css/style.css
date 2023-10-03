@@ -6,12 +6,19 @@ body {
   height: 100%;
 }
 
-canvas {
+#pixi-canvas {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#webcam-canvas {
+  position: absolute;
+  transform: translateX(-100%);
+  z-index: 2;
+}
+
 #overlay {
   position: absolute;
   top: 20px; /* Adjust the top position as needed */

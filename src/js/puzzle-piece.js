@@ -24,6 +24,10 @@ export class PuzzlePiece extends PIXI.utils.EventEmitter {
       .on('pointerupoutside', this.onDragEnd, this)
       .on('pointermove', this.onDragMove, this);
   }
+  onClosedFist(e) {
+    console.log(e);
+  }
+
   onDragStart(e) {
     this.dragging = true;
 
@@ -49,6 +53,11 @@ export class PuzzlePiece extends PIXI.utils.EventEmitter {
     this.sprite.x = this.field.x;
     this.sprite.y = this.field.y;
   }
+
+  get position() {
+    return this.sprite.position;
+  }
+
   onDragMove(e) {
     if (!this.dragging) {
       return;
